@@ -1,4 +1,23 @@
-.journalForm {
+fieldset {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 525px;
 }
+
+
+/* .journalTopicInput {
+    max width: 500px;
+    width: 500px;
+}
+
+.journalEntryInput {
+    max width: 500px;
+    width: 500px;
+    height: 500px;
+}
+
+.journalMoodInput {
+    max width: 500px;
+    width: 500px;
+} */
