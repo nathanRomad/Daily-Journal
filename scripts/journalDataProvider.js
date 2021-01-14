@@ -5,7 +5,6 @@
  *      functions that other modules can use to filter
  *      the entries for different purposes.
  */
-
 // This is the original data.
 const journal = [
     {
