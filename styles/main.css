@@ -1,3 +1,8 @@
+form {
+    background-color: whitesmoke;
+    max-width: 550px;
+}
+
 fieldset {
     display: flex;
     flex-direction: column;
@@ -5,8 +10,10 @@ fieldset {
     max-width: 525px;
 }
 
-
-/* .journalTopicInput {
+h2 {
+    font-family: Helvetica;
+}
+.journalTopicInput {
     max width: 500px;
     width: 500px;
 }
@@ -17,7 +24,13 @@ fieldset {
     height: 500px;
 }
 
+h2::first-letter {
+    font-size: 200%;
+}
+h2::
+}
+
 .journalMoodInput {
     max width: 500px;
     width: 500px;
-} */
+}

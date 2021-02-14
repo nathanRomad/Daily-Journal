@@ -11,7 +11,7 @@
 <body>
     <header></header>
      <h2>Daily Journal</h2>
-        <form class="journalForm" action="">
+        <form class="journalForm" action="/submittedJournal.html" method="POST">
             <fieldset class="journalFieldset">
                 <label for="journalDate">Date of Entry</label>
                 <input type="date" name="journalDate" id="journalDate">
@@ -19,15 +19,55 @@
                 <input class="journalTopicInput"type="Topic" name="journalTopic" id="journalTopic">
                 <label for="journalEntry">Journal Entry</label>
                 <textarea class="journalEntryInput"type="textarea" name="journalEntry" id="journalEntry"></textarea>
-                <label for="moodToday">Mood today</label>
-                <input class="journalMoodInput"type="moodToday" name="moodToday" id="moodToday">
+                <!-- <label for="moodToday">Mood today</label>
+                <input class="journalMoodInput"type="moodToday" name="moodToday" id="moodToday"> -->
+                <label for="mood">What is your mood today?</label>
+                <select id="Mood" name="Mood">
+                    <option value="Elated">Elated</option>
+                    <option value="Happy">Happy</option>
+                    <option value="Cheerful">Cheerful</option>
+                    <option value="Romantic">Romantic</option>
+                    <option value="Whimsical">Whimsical</option>
+                    <option value="Lighthearted">Lighthearted</option>
+                    <option value="Hopeful">Hopeful</option>
+                    <option value="Humorous">Humorous</option>
+                    <option value="Calm">Calm</option>
+                    <option value="Melancholy">Melancholy</option>
+                    <option value="Reflective">Reflective</option>
+                    <option value="Gloomy">Gloomy</option>
+                    <option value="Angry">Angry</option>
+                    <option value="Ominous">Ominous</option>
+                    <option value="Depression">Clinical Depression</option>
+                    <label for="submitJournal"></label>
+                    <input type="submit" value="Submit Journal Entry" formaction="">
+                </select>
             </fieldset>
         </form>
-        <form action="submitJournalEntry">
-            <label for="submitJournal"></label>
-            <input type="submit" value="Submit Journal Entry" formaction="/submittedJournal.html">
+        <section class="entryLog">
+
+        </section>
+        <form action="">
         </form>
     <footer></footer>
     <script type="module" src="./scripts/main.js>
 </body>
 </html>
+
+
+Cheerful
+Reflective
+Gloomy
+Humorous
+Melancholy
+Idyllic
+Whimsical
+Romantic
+Mysterious
+Ominous
+Calm
+Lighthearted
+Hopeful
+Angry
+Fearful
+Tense
+Lonely
