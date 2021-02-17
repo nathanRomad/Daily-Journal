@@ -16,6 +16,7 @@ export const getEntries = () => {
 
 const eventHub = document.querySelector(".mainContainer")
 const dispatchStateChangeEvent = () => {
+    // debugger
     eventHub.dispatchEvent(new CustomEvent("journalStateChanged"))
 }
 
@@ -30,3 +31,6 @@ export const saveNote = (note) => {
     .then(getEntries)
     .then(dispatchStateChangeEvent)
 }
+
+// dispatch customEvent needs gone over
+// saveNote has not been tested.. need to add a save note button and update eventListener

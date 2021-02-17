@@ -43,5 +43,5 @@ const JournalEntryComponent = () => {
 const eventHub = document.querySelector(".mainContainer")
 
 eventHub.addEventListener("journalStateChanged", event => {
-
+// debugger
     })
