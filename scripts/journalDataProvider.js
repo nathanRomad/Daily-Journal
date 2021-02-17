@@ -27,6 +27,7 @@ const journal = [
     raw data in the format that you want
 */
 export const useJournalEntries = () => {
+    debugger
     const sortedByDate = journal.sort(
         (currentEntry, nextEntry) =>
             Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
