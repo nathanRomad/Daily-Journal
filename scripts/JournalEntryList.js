@@ -4,14 +4,14 @@ import { JournalEntryComponent } from "./JournalEntry.js"
 const journalEntryContainer = document.querySelector(".journalEntryContainer")
 
 export const EntryListComponent = () => {
-    debugger
+    // debugger
     let journalEntryHTMLrepresentation = ""
-    const entries = useJournalEntries()
-    for (const entry of entries) {
+    const arrayOfJournalEntries = useJournalEntries()
+    for (const entry of arrayOfJournalEntries) {
         journalEntryHTMLrepresentation += JournalEntryComponent(entry)
     }
     journalEntryContainer.innerHTML += `
         <h2>Journal Entries</h2>
-        ${journalHTMLrepresentation}
+        ${journalEntryHTMLrepresentation}
         `
 }
