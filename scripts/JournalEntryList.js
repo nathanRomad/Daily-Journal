@@ -11,7 +11,6 @@ export const EntryListComponent = () => {
         journalEntryHTMLrepresentation += JournalEntryComponent(entry)
     }
     journalEntryContainer.innerHTML += `
-        <h2>Journal Entries</h2>
         ${journalEntryHTMLrepresentation}
         `
 }

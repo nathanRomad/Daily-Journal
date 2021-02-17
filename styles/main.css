@@ -34,3 +34,22 @@ h2::
     max width: 500px;
     width: 500px;
 }
+
+.journalEntryContainer {
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* align-items: flex-start; */
+    /* flex-wrap: wrap; */
+    border: 2px solid black;
+    margin: 10px;
+    max-width: 375px;
+    background-color: whitesmoke;
+}
+
+.journalEntry {
+    border: 2px solid black;
+    margin: 10px;
+    height: auto;
+    width: 350px;
+    background-color: snow;
+}

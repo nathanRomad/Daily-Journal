@@ -1,0 +1,30 @@
+"journal" = [
+    {
+        "id": 1,
+        "date": "01/04/2021",
+        "topic": "First Day of NSS",
+        "journalEntry": "Cohort46! Our group is awesome!",
+        "mood": "Elated"
+    },
+    {
+        "id": 2,
+        "date": "01/08/2021",
+        "topic": "First week of NSS, complete!",
+        "journalEntry": "It was a great first week.",
+        "mood": "Hopeful"
+    },
+    {
+        "id": 3,
+        "date": "07/24/2025",
+        "topic": "HTML & CSS",
+        "journalEntry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+        "mood": "Ok"
+    },
+    {
+        "id": 4,
+        "date": "07/26/2025",
+        "topic": "Complex Flexbox",
+        "journalEntry": "I tried to have an element in my Flexbox layout also be another Flexbox layout. It hurt my brain. I hate Steve.",
+        "mood": "Sad"
+    }
+]
