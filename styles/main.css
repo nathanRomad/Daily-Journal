@@ -36,10 +36,10 @@ h2::
 }
 
 .journalEntryContainer {
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* align-items: flex-start; */
-    /* flex-wrap: wrap; */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
     border: 2px solid black;
     margin: 10px;
     max-width: 375px;
@@ -52,4 +52,4 @@ h2::
     height: auto;
     width: 350px;
     background-color: snow;
-}
+} */

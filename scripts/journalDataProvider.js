@@ -1,50 +1,32 @@
-/*
- *   Journal data provider for Daily Journal application
- *      Holds the raw data about each entry and exports
- *      functions that other modules can use to filter
- *      the entries for different purposes.
- */
-// This is the original data.
-const journal = [
-    {
-        id: 1,
-        date: "01/04/2021",
-        topic: "First Day of NSS",
-        journalEntry: "Cohort46! Our group is awesome!",
-        mood: "Elated"
-    },
-    {
-        id: 2,
-        date: "01/08/2021",
-        topic: "First week of NSS, complete!",
-        journalEntry: "It was a great first week.",
-        mood: "Hopeful"
-    },
-    {
-        id: 3,
-        date: "07/24/2025",
-        topic: "HTML & CSS",
-        journalEntry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-        mood: "Ok"
-    },
-    {
-        id: 4,
-        date: "07/26/2025",
-        topic: "Complex Flexbox",
-        journalEntry: "I tried to have an element in my Flexbox layout also be another Flexbox layout. It hurt my brain. I hate Steve.",
-        mood: "Sad"
-    }
-]
-
-/*
-    You export a function that provides a version of the
-    raw data in the format that you want
-*/
 export const useJournalEntries = () => {
-    // debugger
-    const sortedByDate = journal.sort(
+    const sortedByDate = entries.sort(
         (currentEntry, nextEntry) =>
-            Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
-    )
+            Date.parse(currentEntry.date) - Date.parse(nextEntry.date))
     return sortedByDate
+}
+
+let entries = [] // useJournalEntries refers to 'entries' in order to sort and use the JournalEntries.
+export const getEntries = () => {
+    return fetch("http://localhost:8088/entries") // Fetch from the API
+    .then(response => response.json())  // Parse as JSON
+    .then(parsedEntries => {
+        entries = parsedEntries
+    }) // store returned data in 'entries'
+}
+
+const eventHub = document.querySelector(".mainContainer")
+const dispatchStateChangeEvent = () => {
+    eventHub.dispatchEvent(new CustomEvent("journalStateChanged"))
+}
+
+export const saveNote = (note) => {
+    return fetch('http://localhost:8088/entries', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(note)
+    })
+    .then(getEntries)
+    .then(dispatchStateChangeEvent)
 }

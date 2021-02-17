@@ -1,4 +1,5 @@
-"journal" = [
+{
+    "entries": [
     {
         "id": 1,
         "date": "01/04/2021",
@@ -27,4 +28,4 @@
         "journalEntry": "I tried to have an element in my Flexbox layout also be another Flexbox layout. It hurt my brain. I hate Steve.",
         "mood": "Sad"
     }
-]
+]}
