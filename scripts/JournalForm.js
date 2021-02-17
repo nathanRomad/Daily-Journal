@@ -39,6 +39,8 @@ const JournalEntryComponent = () => {
         </form>
     `
 }
+// need to consider changing input tag on Submit Journal Entry so I can access it by id.
+// will have to reference button when clicked.
 
 const eventHub = document.querySelector(".mainContainer")
 
